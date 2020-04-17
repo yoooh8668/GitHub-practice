@@ -1,0 +1,39 @@
+2020-04-16_branch-practice
+    Create new branch => cat.
+    And test merge function.
+    Push function test.
+        $git branch <new branch>                        //create new branch
+        $git checkout <branch_name>                     //set HEAD to <branch_name>
+        $git checkout -b <branch_name> 
+            /*if (<branch_name> EXIST?){
+                git checkout <branch_name>}
+              else{
+                git branch <branch_name>
+                git checkout <branch_name>}
+            */
+
+        $git merge <other_branch_name>                  //merge <other_branch_name> to current branch
+
+        $git push origin <branch_name>                  //push <branch_name> to server, if <branch_name> dosen't exist, creat one.
+        $git push origin <target_branch>:<branch_name>
+            /*push <branch_name> to server named <target_branch>, 
+              if <target_branch> dosen't exist, creat one.
+              
+              if (<target_branch> == <branch_name> && <target_branch> EXISTS)
+                  "$git push origin <branch_name>"
+            */
+        $git push origin <branch_name>                 //see $git push origin <target_branch>:<branch_name>
+
+        $git push -u origin <branch_name> 
+            /*craet <branch_name> on origin(remote-target)
+              set upstream on itself.
+              next time, you can just type "$git push"
+              (One branch can only has one upstream)
+            */
+
+2020-4-17_conflict-practice
+    Create 2 branch(1-st/2-nd) and edit "conflict-target.txt"
+    When conflict cteates, modify the file and re-add & re-commit.
+    During confilct, HEAD is outside the branches.
+    After conflict, HEAD is return back to the current branch.
+    
