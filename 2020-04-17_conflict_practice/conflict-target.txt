@@ -1,5 +1,6 @@
 This is first line.
 ***************add conflict line in here
 I'm the 1-st.
+I'm 2-nd
 ***************add conflict line in here
 This is end line.
