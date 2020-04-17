@@ -1,0 +1,22 @@
+joezhang@SW-JOEZHANG MINGW64 /d/Github/GitHub-practice/2020-04-17_conflict_practice (2020-04-17_conflict-practice)
+$ git merge 1-st
+Updating 5940a81..a2cfbfe
+Fast-forward
+ 2020-04-17_conflict_practice/conflict-target.txt | 1 +
+ 1 file changed, 1 insertion(+)
+
+joezhang@SW-JOEZHANG MINGW64 /d/Github/GitHub-practice/2020-04-17_conflict_practice (2020-04-17_conflict-practice)
+$ git merge 2-nd
+Auto-merging 2020-04-17_conflict_practice/conflict-target.txt
+CONFLICT (content): Merge conflict in 2020-04-17_conflict_practice/conflict-target.txt
+Automatic merge failed; fix conflicts and then commit the result.
+
+joezhang@SW-JOEZHANG MINGW64 /d/Github/GitHub-practice/2020-04-17_conflict_practice (2020-04-17_conflict-practice|MERGING)
+$ git add .
+
+joezhang@SW-JOEZHANG MINGW64 /d/Github/GitHub-practice/2020-04-17_conflict_practice (2020-04-17_conflict-practice|MERGING)
+$ git commit -m "conflict fixed"
+[2020-04-17_conflict-practice 3eac195] conflict fixed
+
+joezhang@SW-JOEZHANG MINGW64 /d/Github/GitHub-practice/2020-04-17_conflict_practice (2020-04-17_conflict-practice)
+$
