@@ -1,0 +1,306 @@
+joezhang@SW-JOEZHANG MINGW64 /d/Github/GitHub-practice (master)
+$ git checkout cat
+Switched to branch 'cat'
+
+joezhang@SW-JOEZHANG MINGW64 /d/Github/GitHub-practice (cat)
+$ git reset cat^3
+fatal: ambiguous argument 'cat^3': unknown revision or path not in the working tree.
+Use '--' to separate paths from revisions, like this:
+'git <command> [<revision>...] -- [<file>...]'
+
+joezhang@SW-JOEZHANG MINGW64 /d/Github/GitHub-practice (cat)
+$ git log
+commit e9f373abffc66d1dab8d8dcc4787707195834138 (HEAD -> cat)
+Author: Joe Zhang <kenny.1234580@gmail.com>
+Date:   Thu Apr 16 17:47:09 2020 +0800
+
+    branch cat - add cat-3.txt
+
+commit c77f70affee6936043dbc26ebc4fdf7d5147899e
+Author: Joe Zhang <kenny.1234580@gmail.com>
+Date:   Thu Apr 16 17:46:53 2020 +0800
+
+    branch cat - add cat-2.txt
+
+commit b4db63cbb9f9727abc07a86c185185b7d7a069b7
+Author: Joe Zhang <kenny.1234580@gmail.com>
+Date:   Thu Apr 16 17:46:38 2020 +0800
+
+    branch cat - add cat-1.txt
+
+commit 042d475641ad1771b515f5d4dd0ccede16a8f076 (origin/master, origin/HEAD, master)
+Author: Joe Zhang <kenny.1234580@gmail.com>
+Date:   Thu Apr 16 17:02:40 2020 +0800
+
+joezhang@SW-JOEZHANG MINGW64 /d/Github/GitHub-practice (cat)
+$ git checkout cat
+Already on 'cat'
+
+joezhang@SW-JOEZHANG MINGW64 /d/Github/GitHub-practice (cat)
+$ git reset HEAD^^^
+
+joezhang@SW-JOEZHANG MINGW64 /d/Github/GitHub-practice (cat)
+$ echo "2020-04-16" > 2020-04-16.txt
+
+joezhang@SW-JOEZHANG MINGW64 /d/Github/GitHub-practice (cat)
+$ rm -rf 2020-04-16.txt
+
+joezhang@SW-JOEZHANG MINGW64 /d/Github/GitHub-practice (cat)
+$ ls
+2020-04-16_branch-practice/  README.md
+
+joezhang@SW-JOEZHANG MINGW64 /d/Github/GitHub-practice (cat)
+$ cd 2020-04-16_branch-practice/
+
+joezhang@SW-JOEZHANG MINGW64 /d/Github/GitHub-practice/2020-04-16_branch-practice (cat)
+$ echo "2020-04-16" > 2020-04-16.txt
+
+joezhang@SW-JOEZHANG MINGW64 /d/Github/GitHub-practice/2020-04-16_branch-practice (cat)
+$ git add 2020-04-16.txt
+warning: LF will be replaced by CRLF in 2020-04-16_branch-practice/2020-04-16.txt.
+The file will have its original line endings in your working directory
+
+joezhang@SW-JOEZHANG MINGW64 /d/Github/GitHub-practice/2020-04-16_branch-practice (cat)
+$ git commit -m "set file time"
+[cat 69a330d] set file time
+ 1 file changed, 1 insertion(+)
+ create mode 100644 2020-04-16_branch-practice/2020-04-16.txt
+
+joezhang@SW-JOEZHANG MINGW64 /d/Github/GitHub-practice/2020-04-16_branch-practice (cat)
+$ git merge master cat
+Already up to date.
+
+joezhang@SW-JOEZHANG MINGW64 /d/Github/GitHub-practice/2020-04-16_branch-practice (cat)
+$ cd ..
+
+joezhang@SW-JOEZHANG MINGW64 /d/Github/GitHub-practice (cat)
+$ git checkout master
+Switched to branch 'master'
+Your branch is up to date with 'origin/master'.
+
+joezhang@SW-JOEZHANG MINGW64 /d/Github/GitHub-practice (master)
+$ git merge cat
+Updating 042d475..69a330d
+Fast-forward
+ 2020-04-16_branch-practice/2020-04-16.txt | 1 +
+ 1 file changed, 1 insertion(+)
+ create mode 100644 2020-04-16_branch-practice/2020-04-16.txt
+
+joezhang@SW-JOEZHANG MINGW64 /d/Github/GitHub-practice (master)
+$ git log --oneline
+69a330d (HEAD -> master, cat) set file time
+042d475 (origin/master, origin/HEAD) first commit
+
+joezhang@SW-JOEZHANG MINGW64 /d/Github/GitHub-practice (master)
+$ git merge origin/master
+Already up to date.
+
+joezhang@SW-JOEZHANG MINGW64 /d/Github/GitHub-practice (master)
+$ git log --oneline
+69a330d (HEAD -> master, cat) set file time
+042d475 (origin/master, origin/HEAD) first commit
+
+joezhang@SW-JOEZHANG MINGW64 /d/Github/GitHub-practice (master)
+$ git push origin master
+Enumerating objects: 5, done.
+Counting objects: 100% (5/5), done.
+Delta compression using up to 4 threads
+Compressing objects: 100% (2/2), done.
+Writing objects: 100% (4/4), 363 bytes | 363.00 KiB/s, done.
+Total 4 (delta 0), reused 0 (delta 0), pack-reused 0
+To github.com:yoooh8668/GitHub-practice.git
+   042d475..69a330d  master -> master
+
+joezhang@SW-JOEZHANG MINGW64 /d/Github/GitHub-practice (master)
+$ git checkout cat
+Switched to branch 'cat'
+
+joezhang@SW-JOEZHANG MINGW64 /d/Github/GitHub-practice (cat)
+$ git log
+commit 69a330d3c8c0981728495f122825f087d1b610d4 (HEAD -> cat, origin/master, origin/HEAD, master)
+Author: Joe Zhang <kenny.1234580@gmail.com>
+Date:   Thu Apr 16 17:58:45 2020 +0800
+
+    set file time
+
+commit 042d475641ad1771b515f5d4dd0ccede16a8f076
+Author: Joe Zhang <kenny.1234580@gmail.com>
+Date:   Thu Apr 16 17:02:40 2020 +0800
+
+    first commit
+
+joezhang@SW-JOEZHANG MINGW64 /d/Github/GitHub-practice (cat)
+$ git reflog
+69a330d (HEAD -> cat, origin/master, origin/HEAD, master) HEAD@{0}: checkout: moving from master to cat
+69a330d (HEAD -> cat, origin/master, origin/HEAD, master) HEAD@{1}: merge cat: Fast-forward
+042d475 HEAD@{2}: checkout: moving from cat to master
+69a330d (HEAD -> cat, origin/master, origin/HEAD, master) HEAD@{3}: commit: set file time
+042d475 HEAD@{4}: reset: moving to HEAD^^^
+e9f373a HEAD@{5}: checkout: moving from cat to cat
+e9f373a HEAD@{6}: checkout: moving from master to cat
+042d475 HEAD@{7}: checkout: moving from cat to master
+e9f373a HEAD@{8}: commit: branch cat - add cat-3.txt
+c77f70a HEAD@{9}: commit: branch cat - add cat-2.txt
+b4db63c HEAD@{10}: commit: branch cat - add cat-1.txt
+042d475 HEAD@{11}: checkout: moving from master to cat
+042d475 HEAD@{12}: clone: from git@github.com:yoooh8668/GitHub-practice.git
+
+joezhang@SW-JOEZHANG MINGW64 /d/Github/GitHub-practice (cat)
+$ git reset e9f373a
+
+joezhang@SW-JOEZHANG MINGW64 /d/Github/GitHub-practice (cat)
+$ git log
+commit e9f373abffc66d1dab8d8dcc4787707195834138 (HEAD -> cat)
+Author: Joe Zhang <kenny.1234580@gmail.com>
+Date:   Thu Apr 16 17:47:09 2020 +0800
+
+    branch cat - add cat-3.txt
+
+commit c77f70affee6936043dbc26ebc4fdf7d5147899e
+Author: Joe Zhang <kenny.1234580@gmail.com>
+Date:   Thu Apr 16 17:46:53 2020 +0800
+
+    branch cat - add cat-2.txt
+
+commit b4db63cbb9f9727abc07a86c185185b7d7a069b7
+Author: Joe Zhang <kenny.1234580@gmail.com>
+Date:   Thu Apr 16 17:46:38 2020 +0800
+
+    branch cat - add cat-1.txt
+
+commit 042d475641ad1771b515f5d4dd0ccede16a8f076
+Author: Joe Zhang <kenny.1234580@gmail.com>
+Date:   Thu Apr 16 17:02:40 2020 +0800
+
+    first commit
+
+joezhang@SW-JOEZHANG MINGW64 /d/Github/GitHub-practice (cat)
+$ git merge master
+error: The following untracked working tree files would be overwritten by merge:
+        2020-04-16_branch-practice/2020-04-16.txt
+Please move or remove them before you merge.
+Aborting
+
+joezhang@SW-JOEZHANG MINGW64 /d/Github/GitHub-practice (cat)
+$ git status
+On branch cat
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+        2020-04-16_branch-practice/2020-04-16.txt
+
+nothing added to commit but untracked files present (use "git add" to track)
+
+joezhang@SW-JOEZHANG MINGW64 /d/Github/GitHub-practice (cat)
+$ git merge master
+Merge made by the 'recursive' strategy.
+ 2020-04-16_branch-practice/2020-04-16.txt | 1 +
+ 1 file changed, 1 insertion(+)
+ create mode 100644 2020-04-16_branch-practice/2020-04-16.txt
+
+joezhang@SW-JOEZHANG MINGW64 /d/Github/GitHub-practice (cat)
+$ git merge origin
+Already up to date.
+
+joezhang@SW-JOEZHANG MINGW64 /d/Github/GitHub-practice (cat)
+$ git push
+fatal: The current branch cat has no upstream branch.
+To push the current branch and set the remote as upstream, use
+
+    git push --set-upstream origin cat
+
+
+joezhang@SW-JOEZHANG MINGW64 /d/Github/GitHub-practice (cat)
+$ git push -u
+fatal: The current branch cat has no upstream branch.
+To push the current branch and set the remote as upstream, use
+
+    git push --set-upstream origin cat
+
+
+joezhang@SW-JOEZHANG MINGW64 /d/Github/GitHub-practice (cat)
+$ git push -u origin cat
+Enumerating objects: 18, done.
+Counting objects: 100% (18/18), done.
+Delta compression using up to 4 threads
+Compressing objects: 100% (11/11), done.
+Writing objects: 100% (15/15), 1.41 KiB | 481.00 KiB/s, done.
+Total 15 (delta 2), reused 0 (delta 0), pack-reused 0
+remote: Resolving deltas: 100% (2/2), done.
+remote:
+remote: Create a pull request for 'cat' on GitHub by visiting:
+remote:      https://github.com/yoooh8668/GitHub-practice/pull/new/cat
+remote:
+To github.com:yoooh8668/GitHub-practice.git
+ * [new branch]      cat -> cat
+Branch 'cat' set up to track remote branch 'cat' from 'origin'.
+
+joezhang@SW-JOEZHANG MINGW64 /d/Github/GitHub-practice (cat)
+$ git push -u origin master
+Everything up-to-date
+Branch 'master' set up to track remote branch 'master' from 'origin'.
+
+joezhang@SW-JOEZHANG MINGW64 /d/Github/GitHub-practice (cat)
+$ git checkout master
+Switched to branch 'master'
+Your branch is up to date with 'origin/master'.
+
+joezhang@SW-JOEZHANG MINGW64 /d/Github/GitHub-practice (master)
+$ git log --oneline
+69a330d (HEAD -> master, origin/master, origin/HEAD) set file time
+042d475 first commit
+
+joezhang@SW-JOEZHANG MINGW64 /d/Github/GitHub-practice (master)
+$ git merge cat
+Updating 69a330d..a9f3498
+Fast-forward
+ 2020-04-16_branch-practice/cat-1.txt | 1 +
+ 2020-04-16_branch-practice/cat-2.txt | 1 +
+ 2020-04-16_branch-practice/cat-3.txt | 1 +
+ 3 files changed, 3 insertions(+)
+ create mode 100644 2020-04-16_branch-practice/cat-1.txt
+ create mode 100644 2020-04-16_branch-practice/cat-2.txt
+ create mode 100644 2020-04-16_branch-practice/cat-3.txt
+
+joezhang@SW-JOEZHANG MINGW64 /d/Github/GitHub-practice (master)
+$ git log --oneline
+a9f3498 (HEAD -> master, origin/cat, cat) Merge branch 'master' into cat
+69a330d (origin/master, origin/HEAD) set file time
+e9f373a branch cat - add cat-3.txt
+c77f70a branch cat - add cat-2.txt
+b4db63c branch cat - add cat-1.txt
+042d475 first commit
+
+joezhang@SW-JOEZHANG MINGW64 /d/Github/GitHub-practice (master)
+$ git merge origin
+Already up to date.
+
+joezhang@SW-JOEZHANG MINGW64 /d/Github/GitHub-practice (master)
+$ git push origin
+Total 0 (delta 0), reused 0 (delta 0), pack-reused 0
+To github.com:yoooh8668/GitHub-practice.git
+   69a330d..a9f3498  master -> master
+
+joezhang@SW-JOEZHANG MINGW64 /d/Github/GitHub-practice (master)
+$ git push master
+fatal: 'master' does not appear to be a git repository
+fatal: Could not read from remote repository.
+
+Please make sure you have the correct access rights
+and the repository exists.
+
+joezhang@SW-JOEZHANG MINGW64 /d/Github/GitHub-practice (master)
+$ git branch -m cat 20-04-16_cat
+
+joezhang@SW-JOEZHANG MINGW64 /d/Github/GitHub-practice (master)
+$ git log --online
+fatal: unrecognized argument: --online
+
+joezhang@SW-JOEZHANG MINGW64 /d/Github/GitHub-practice (master)
+$ git log --oneline
+a9f3498 (HEAD -> master, origin/master, origin/cat, origin/HEAD, 20-04-16_cat) Merge branch 'master' into cat
+69a330d set file time
+e9f373a branch cat - add cat-3.txt
+c77f70a branch cat - add cat-2.txt
+b4db63c branch cat - add cat-1.txt
+042d475 first commit
+
