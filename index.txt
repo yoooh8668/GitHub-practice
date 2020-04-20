@@ -1,18 +1,6 @@
 2020-04-15_git-install
     Reference website of git-install.
 
-2020-04-15_git-commit-test
-    It has two parts.
-    1. Simple commit command.
-    2. Situations
-           A.
-           B.
-           C.
-           D.
-           E.
-
-
-
 2020-04-16_branch-practice
     Create new branch => cat.
     And test merge function.
@@ -51,4 +39,22 @@
     When conflict cteates, modify the file and re-add & re-commit.
     During confilct, HEAD is outside the branches.
     After conflict, HEAD is return back to the current branch.
+    
+
+2020-04-20_reset-rebase
+    A.switch to certain commit
+        $git reset <commit> --hard          //add "--hard" to make sure that all file are changing to that state.
+    B.split commit
+        $git rebase -i <commit>             //"edit" commit you want to split
+        $git reset HEAD^                    //reset the state of the commit
+        $(split commit by your require)
+        $git rebase --continue              //close rebase mode
+    C.combine commit
+        $git rebase -i <THE ABOVE COMMIT>   //"edit" THE ABOVE COMMIT you want to combine
+        $(combine commits by your require)
+        $git rebase --continue              //close rebase mode
+    D.insert commit
+        $git rebase -i <THE ABOVE COMMIT>   //"edit" THE ABOVE COMMIT you want to insert to
+        $(add new commits by your require)
+        $git rebase --continue              //close rebase mode
     
