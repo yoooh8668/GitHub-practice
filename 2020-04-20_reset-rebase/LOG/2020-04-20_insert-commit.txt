@@ -1,0 +1,71 @@
+joezhang@SW-JOEZHANG MINGW64 /d/Github/GitHub-practice/2020-04-20_reset-rebase (2020-04-20_reset-rebase)
+$ git log --oneline
+6e49bb9 (HEAD -> 2020-04-20_reset-rebase) rat3
+f9bf7ee rat2
+cf0ec66 rat1
+a905003 cat dog together
+d1686b1 (origin/master-clean, master-clean) Modify README.md
+b4c7300 set master-clean for other practice
+9ffd5ae set time file
+c0f86e8 set master clean
+b0af507 upload SourceTree picture
+3f7aaeb add full log of this practice
+a9f3498 Merge branch 'master' into cat
+69a330d set file time
+e9f373a branch cat - add cat-3.txt
+c77f70a branch cat - add cat-2.txt
+b4db63c branch cat - add cat-1.txt
+042d475 first commit
+
+joezhang@SW-JOEZHANG MINGW64 /d/Github/GitHub-practice/2020-04-20_reset-rebase (2020-04-20_reset-rebase)
+$ git reset 6e49bb9 --hard
+HEAD is now at 6e49bb9 rat3
+
+joezhang@SW-JOEZHANG MINGW64 /d/Github/GitHub-practice/2020-04-20_reset-rebase (2020-04-20_reset-rebase)
+$ git rebase -i d1686b1
+Stopped at a905003...  cat dog together
+You can amend the commit now, with
+
+  git commit --amend
+
+Once you are satisfied with your changes, run
+
+  git rebase --continue
+
+joezhang@SW-JOEZHANG MINGW64 /d/Github/GitHub-practice/2020-04-20_reset-rebase (2020-04-20_reset-rebase)
+$ echo "cat-hero" > cat-hero.txt
+
+joezhang@SW-JOEZHANG MINGW64 /d/Github/GitHub-practice/2020-04-20_reset-rebase (2020-04-20_reset-rebase|REBASE 1/4)
+$ git add .
+warning: LF will be replaced by CRLF in 2020-04-20_reset-rebase/cat-hero.txt.
+The file will have its original line endings in your working directory
+
+joezhang@SW-JOEZHANG MINGW64 /d/Github/GitHub-practice/2020-04-20_reset-rebase (2020-04-20_reset-rebase|REBASE 1/4)
+$ git commit -m "hero cat came from above to kill rats"
+[detached HEAD 9447245] hero cat came from above to kill rats
+ 1 file changed, 1 insertion(+)
+ create mode 100644 2020-04-20_reset-rebase/cat-hero.txt
+
+joezhang@SW-JOEZHANG MINGW64 /d/Github/GitHub-practice/2020-04-20_reset-rebase (2020-04-20_reset-rebase|REBASE 1/4)
+$ git rebase --continue
+Successfully rebased and updated refs/heads/2020-04-20_reset-rebase.
+
+joezhang@SW-JOEZHANG MINGW64 /d/Github/GitHub-practice/2020-04-20_reset-rebase (2020-04-20_reset-rebase)
+$ git log --oneline
+e3de34d (HEAD -> 2020-04-20_reset-rebase) rat3
+9e2de9e rat2
+bcf000b rat1
+9447245 hero cat came from above to kill rats
+a905003 cat dog together
+d1686b1 (origin/master-clean, master-clean) Modify README.md
+b4c7300 set master-clean for other practice
+9ffd5ae set time file
+c0f86e8 set master clean
+b0af507 upload SourceTree picture
+3f7aaeb add full log of this practice
+a9f3498 Merge branch 'master' into cat
+69a330d set file time
+e9f373a branch cat - add cat-3.txt
+c77f70a branch cat - add cat-2.txt
+b4db63c branch cat - add cat-1.txt
+042d475 first commit

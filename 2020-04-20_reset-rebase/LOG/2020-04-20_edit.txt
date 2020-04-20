@@ -1,0 +1,118 @@
+joezhang@SW-JOEZHANG MINGW64 /d/Github/GitHub-practice (2020-04-20_reset-rebase|REBASE 2/2)
+$ git log --oneline
+1427251 (HEAD) add all rat
+a905003 (2020-04-20_reset-rebase) cat dog together
+d1686b1 (origin/master-clean, master-clean) Modify README.md
+b4c7300 set master-clean for other practice
+9ffd5ae set time file
+c0f86e8 set master clean
+b0af507 upload SourceTree picture
+3f7aaeb add full log of this practice
+a9f3498 Merge branch 'master' into cat
+69a330d set file time
+e9f373a branch cat - add cat-3.txt
+c77f70a branch cat - add cat-2.txt
+b4db63c branch cat - add cat-1.txt
+042d475 first commit
+
+joezhang@SW-JOEZHANG MINGW64 /d/Github/GitHub-practice (2020-04-20_reset-rebase)
+$ git rebase -i a905003
+Stopped at 5e22fbd...  add all rats
+You can amend the commit now, with
+
+  git commit --amend
+
+Once you are satisfied with your changes, run
+
+  git rebase --continue
+
+joezhang@SW-JOEZHANG MINGW64 /d/Github/GitHub-practice (2020-04-20_reset-rebase|REBASE 1/1)
+$ git reset HEAD^
+
+joezhang@SW-JOEZHANG MINGW64 /d/Github/GitHub-practice (2020-04-20_reset-rebase|REBASE 1/1)
+$ git status
+interactive rebase in progress; onto a905003
+Last command done (1 command done):
+   edit 5e22fbd add all rats
+No commands remaining.
+You are currently editing a commit while rebasing branch '2020-04-20_reset-rebase' on 'a905003'.
+  (use "git commit --amend" to amend the current commit)
+  (use "git rebase --continue" once you are satisfied with your changes)
+
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+        2020-04-20_reset-rebase/rat1.txt
+        2020-04-20_reset-rebase/rat2.txt
+        2020-04-20_reset-rebase/rat3.txt
+
+nothing added to commit but untracked files present (use "git add" to track)
+
+joezhang@SW-JOEZHANG MINGW64 /d/Github/GitHub-practice (2020-04-20_reset-rebase|REBASE 1/1)
+$ cd 2020-04-20_reset-rebase/
+
+joezhang@SW-JOEZHANG MINGW64 /d/Github/GitHub-practice/2020-04-20_reset-rebase (2020-04-20_reset-rebase|REBASE 1/1)
+$ git add rat1.txt
+
+joezhang@SW-JOEZHANG MINGW64 /d/Github/GitHub-practice/2020-04-20_reset-rebase (2020-04-20_reset-rebase|REBASE 1/1)
+$ git commit -m "rat1"
+[detached HEAD cf0ec66] rat1
+ 1 file changed, 0 insertions(+), 0 deletions(-)
+ create mode 100644 2020-04-20_reset-rebase/rat1.txt
+
+joezhang@SW-JOEZHANG MINGW64 /d/Github/GitHub-practice/2020-04-20_reset-rebase (2020-04-20_reset-rebase|REBASE 1/1)
+$ git add rat2.txt
+
+joezhang@SW-JOEZHANG MINGW64 /d/Github/GitHub-practice/2020-04-20_reset-rebase (2020-04-20_reset-rebase|REBASE 1/1)
+$ git commit -m "rat2"
+[detached HEAD f9bf7ee] rat2
+ 1 file changed, 0 insertions(+), 0 deletions(-)
+joezhang@SW-JOEZHANG MINGW64 /d/Github/GitHub-practice/2020-04-20_reset-rebase (2020-04-20_reset-rebase|REBASE 1/1)
+$ git add rat3.txt
+
+joezhang@SW-JOEZHANG MINGW64 /d/Github/GitHub-practice/2020-04-20_reset-rebase (2020-04-20_reset-rebase|REBASE 1/1)
+$ git commit -m "rat3"
+[detached HEAD 6e49bb9] rat3
+ 1 file changed, 0 insertions(+), 0 deletions(-)
+ create mode 100644 2020-04-20_reset-rebase/rat3.txt
+
+joezhang@SW-JOEZHANG MINGW64 /d/Github/GitHub-practice/2020-04-20_reset-rebase (2020-04-20_reset-rebase|REBASE 1/1)
+$ git log --oneline
+6e49bb9 (HEAD) rat3
+f9bf7ee rat2
+cf0ec66 rat1
+a905003 cat dog together
+d1686b1 (origin/master-clean, master-clean) Modify README.md
+b4c7300 set master-clean for other practice
+9ffd5ae set time file
+c0f86e8 set master clean
+b0af507 upload SourceTree picture
+3f7aaeb add full log of this practice
+a9f3498 Merge branch 'master' into cat
+69a330d set file time
+e9f373a branch cat - add cat-3.txt
+c77f70a branch cat - add cat-2.txt
+b4db63c branch cat - add cat-1.txt
+042d475 first commit
+
+joezhang@SW-JOEZHANG MINGW64 /d/Github/GitHub-practice/2020-04-20_reset-rebase (2020-04-20_reset-rebase|REBASE 1/1)
+$ git rebase --continue
+Successfully rebased and updated refs/heads/2020-04-20_reset-rebase.
+
+joezhang@SW-JOEZHANG MINGW64 /d/Github/GitHub-practice/2020-04-20_reset-rebase (2020-04-20_reset-rebase)
+$ git log --oneline
+6e49bb9 (HEAD -> 2020-04-20_reset-rebase) rat3
+f9bf7ee rat2
+cf0ec66 rat1
+a905003 cat dog together
+d1686b1 (origin/master-clean, master-clean) Modify README.md
+b4c7300 set master-clean for other practice
+9ffd5ae set time file
+c0f86e8 set master clean
+b0af507 upload SourceTree picture
+3f7aaeb add full log of this practice
+a9f3498 Merge branch 'master' into cat
+69a330d set file time
+e9f373a branch cat - add cat-3.txt
+c77f70a branch cat - add cat-2.txt
+b4db63c branch cat - add cat-1.txt
+042d475 first commit

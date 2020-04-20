@@ -1,0 +1,49 @@
+joezhang@SW-JOEZHANG MINGW64 /d/Github/GitHub-practice/2020-04-20_reset-rebase (2020-04-20_reset-rebase)
+$ git log --oneline
+605e17c (HEAD -> 2020-04-20_reset-rebase) add dog 2
+1bc1e91 add dog 1
+8a4c137 add cat 2
+23cb002 add cat 1
+d1686b1 (origin/master-clean, master-clean) Modify README.md
+b4c7300 set master-clean for other practice
+9ffd5ae set time file
+c0f86e8 set master clean
+b0af507 upload SourceTree picture
+3f7aaeb add full log of this practice
+a9f3498 Merge branch 'master' into cat
+69a330d set file time
+e9f373a branch cat - add cat-3.txt
+c77f70a branch cat - add cat-2.txt
+b4db63c branch cat - add cat-1.txt
+042d475 first commit
+
+joezhang@SW-JOEZHANG MINGW64 /d/Github/GitHub-practice/2020-04-20_reset-rebase (2020-04-20_reset-rebase)
+$ git rebase -i di686b1
+fatal: invalid upstream 'di686b1'
+
+joezhang@SW-JOEZHANG MINGW64 /d/Github/GitHub-practice/2020-04-20_reset-rebase (2020-04-20_reset-rebase)
+$ git rebase -i d1686b1
+[detached HEAD a905003] cat dog together
+ Date: Mon Apr 20 10:45:35 2020 +0800
+ 4 files changed, 4 insertions(+)
+ create mode 100644 2020-04-20_reset-rebase/cat-1
+ create mode 100644 2020-04-20_reset-rebase/cat-2
+ create mode 100644 2020-04-20_reset-rebase/dog-1
+ create mode 100644 2020-04-20_reset-rebase/dog-2
+Successfully rebased and updated refs/heads/2020-04-20_reset-rebase.
+
+joezhang@SW-JOEZHANG MINGW64 /d/Github/GitHub-practice/2020-04-20_reset-rebase (2020-04-20_reset-rebase)
+$ git log --oneline
+a905003 (HEAD -> 2020-04-20_reset-rebase) cat dog together
+d1686b1 (origin/master-clean, master-clean) Modify README.md
+b4c7300 set master-clean for other practice
+9ffd5ae set time file
+c0f86e8 set master clean
+b0af507 upload SourceTree picture
+3f7aaeb add full log of this practice
+a9f3498 Merge branch 'master' into cat
+69a330d set file time
+e9f373a branch cat - add cat-3.txt
+c77f70a branch cat - add cat-2.txt
+b4db63c branch cat - add cat-1.txt
+042d475 first commit
